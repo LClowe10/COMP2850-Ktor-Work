@@ -4,13 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light dark">
-        
+
         <title>Pico Example</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     </head>
 
     <body>
+        <style>
+            h1 {
+                --pico-font-family: Pacifico, cursive;
+                --pico-font-weight: 400;
+                --pico-typography-spacing-vertical: 0.5rem;
+            }
+
+            button {
+                --pico-font-weight: 700;
+            }
+
+        </style>
         <main class="container">
             <h1>My Friends</h1>
 
@@ -29,7 +41,7 @@
             <p>Omar uses nano</p>
             <h3>Image of Omar</h3>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRoZzG42bVkQr35exyYlgiTdY_XNlsceikIE6v1EArag&s=10" alt="Omar being an advert">
-            <p>Here is the <a href="https://www.instagram.com/reel/DKbYeUIvxEY/"> video </a></p>
+            <p>Here is the <a href="https://www.instagram.com/reel/DKbYeUIvxEY/" class="contrast"> video </a></p>
 
              <h2>Tell me about yourself</h2>
             <form action="https://httpbin.io/dump/request" method="POST">
@@ -58,7 +70,7 @@
                         <label for="student">Student</label>
                         <input type="radio" id="student" name="identity">
                     </p>
-                    <button>submit</button>
+                    <button class="outline">submit</button>
                 </fieldset>
             </form>
         </main>
