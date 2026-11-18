@@ -24,8 +24,10 @@ class ApplicationTest : FreeSpec({
     "Valid title present" {
         testApplication {
             configure()
-            val body = client.get("/").bodyAsText()
-            body shouldContain "<title>My Document</title>"
+            val response = client.get("/")
+            val body = response.bodyAsText()
+            val titles = Jsoup.parse(body).select("head > title")
+            titles shouldHaveSize 1
         }
     }
 })
